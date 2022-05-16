@@ -1,0 +1,19 @@
+<hello name="{{ name }}"></hello>
+<p>Start editing to see some magic happen :)</p>
+<div class="table">
+  <table>
+    <tr *ngFor="let student of mergedObs | async">
+      <td>
+        {{ student.name }}
+      </td>
+      {{
+        student.courseCount
+      }}
+      {{
+        student.show
+      }}
+      <button *ngIf="student.show">Add Btn</button>
+    </tr>
+
+  </table>
+</div>
